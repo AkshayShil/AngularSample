@@ -1,0 +1,10 @@
+footer{
+    height: 5em;
+    display: block;
+    background-color: crimson;
+    color: white;
+    display: flex;
+    // Remove this two
+    align-items: center;
+    justify-content: center;
+}

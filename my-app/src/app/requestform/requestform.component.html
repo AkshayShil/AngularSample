@@ -1,0 +1,30 @@
+<form #dataform="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <legend>Initiate Request</legend>
+        Please select an option. After selecting the criteria click on submit
+        <!-- TODO: Connect the controller to form -->
+        <div class="form-element-center">
+            <input type="radio" name="choice-1" [(ngModel)]="model.radio_option">
+            <label for="choice-1">Apply On-Behalf</label>
+        </div>
+        <div class="form-element-center">
+            <input type="radio" name="choice-1" [(ngModel)]="model.radio_option">
+            <label for="choice-1">Cancel Request</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Select Employee</legend>
+        Enter the employee on whose behalf you are raising RBA, Click on show to display employee name
+        <div class="form-element-left">
+            <label for="emp-id">Emp Id</label>
+            <input type="text" [(ngModel)]="model.name" name="empname"> <button type="submit">Show</button>
+        </div>
+    </fieldset>
+    <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+
+{{model.name}}
+{{model.radio_option}}
